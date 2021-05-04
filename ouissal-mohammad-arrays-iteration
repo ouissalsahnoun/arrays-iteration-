@@ -386,6 +386,49 @@ return resultarray
 }
 
 
+   //Q29
+   // answer 
+
+
+function shortestOfMixed(array){
+    var onlyString=[]
+    for(var i=0;i<array.length; i++){
+        if (typeof array[i]==='string'){
+            onlyString.push(array[i])
+        }   
+    }
+    if ((onlyString.length)===0){ return ''}
+    var min=onlyString[0]
+    for(var j=1;j<onlyString.length;j++){            
+        if ((onlyString[j].length)<(min.length)){
+            min=onlyString[j]
+        }
+    }
+    return min
+    }
+
+
+    //Q30
+    // answer 
+
+
+
+function smallestOfMixed(array){
+    var onlynumbers=[]
+    for(var i=0;i<array.length; i++){
+        if (typeof array[i]==='number'){
+            onlynumbers.push(array[i])
+        }
+    }
+    if ((onlynumbers.length)===0){ return 0}
+    var min=onlynumbers[0]
+    for(var j=1;j<onlynumbers.length;j++){
+        if ((onlynumbers[j])<(min)){
+            min=onlynumbers[j]
+        }
+    }
+    return min
+    }
 
 
 
